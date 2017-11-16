@@ -7,15 +7,29 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>mapa</ion-title>
+    <ion-title>Crear Mapa</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-     <ion-list>
-        <ion-checkbox ng-model="filter.blue">Red</ion-checkbox>
-        <ion-checkbox ng-model="filter.yellow">Yellow</ion-checkbox>
-        <ion-checkbox ng-model="filter.pink">Pink</ion-checkbox>
-      </ion-list>
+  <h4>Ingrese las dimension de la sala a recorrer</h4>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Ancho:</ion-label>
+      <ion-input type="number"  [(ngModel)]="ancho" name= "ancho" min="1"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary">Largo:</ion-label>
+        <ion-input type="number" [(ngModel)]="largo" name= "largo" min="1"></ion-input>
+    </ion-item>
+    <div class="centrado">
+      <button ion-button type="submit" (click)="agregarObstaculos()">Agregar obstaculos</button>
+    </div>
+  </ion-list>
+  <ion-list>
+    <ion-checkbox ng-model="filter.blue">Red</ion-checkbox>
+    <ion-checkbox ng-model="filter.yellow">Yellow</ion-checkbox>
+    <ion-checkbox ng-model="filter.pink">Pink</ion-checkbox>
+  </ion-list>
 </ion-content>

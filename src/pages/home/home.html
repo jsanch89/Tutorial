@@ -1,14 +1,16 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Control Carro
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="centrado">
+    <ion-list>
+      <button ion-button (click)="goToCrearMapa()">Crear Mapa</button>
+      <button ion-button (click)="goToViaje()">Ingresar Recorrido</button>
+    </ion-list>
+  </div>
 </ion-content>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CrearObstaculoPage } from '../crear-obstaculo/crear-obstaculo';
+import { SingletonService } from '../../services/singleton/singleton';
 
 /**
  * Generated class for the MapaPage page.
@@ -14,12 +16,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'mapa.html',
 })
 export class MapaPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  ancho:number;
+  largo:number;
+  nose:any;
+  obsta:CrearObstaculoPage;
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams, public singleton: SingletonService) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MapaPage');
+  agregarObstaculos(){
+    this.singleton.setAncho( this.ancho );
+    this.singleton.setLargo( this.largo );
+    this.singleton.crearMapaL();
+    this.navCtrl.push( CrearObstaculoPage );    
   }
 
 }

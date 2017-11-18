@@ -28,7 +28,7 @@ export class SingletonService{
       this.sala[i] = [];
       for( var j = 0; j < this.ancho; ++j){
         this.sala[i][j]  = {
-          id:(String(i)+","+String(j)), 
+          id:[i,j], 
           numer: 0 ,
           isObstaculo: false 
         };
@@ -40,17 +40,8 @@ export class SingletonService{
     return this.sala;
   }
 
-  cambioEstado( posi ){
-   
-   if(this.sala[posi[0]][posi[1]].isObstaculo){
-    this.sala[posi[0]][posi[1]] = 1;
-    this.sala[posi[0]][posi[1]].isObstaculo = true;
-   }
-   else{
-    this.sala[posi[0]][posi[1]].isObstaculo = false;
-    this.sala[posi[0]][posi[1]] = 0;
-   }
-   console.log(this.sala);
+  setSala( thing ){
+    this.sala = thing;
   }
 
  }

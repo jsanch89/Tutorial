@@ -27,9 +27,10 @@ export class CrearObstaculoPage {
     console.log('ionViewDidLoad CrearObstaculoPage');
   }
 
-  obstacu( thing ){
-     console.log( this.sala[0][0] );
-    // this.singleton.cambioEstado( posi );
+  crear(){
+    this.singleton.setSala(this.sala);
+    this.navCtrl.pop();
+    this.navCtrl.pop();
   }
   
 }

@@ -11,16 +11,27 @@
   </ion-navbar>
 
 </ion-header>
-<ion-content padding>
-    <ion-grid class="df">
-      <ion-row justify-content= "space-between" *ngFor="let filas of sala">
+<ion-content>
+<ion-scroll scrollX = "true" style = "white-space:nowrap; height:2000px">
+    <ion-grid>
+      <ion-row style = "align-items:flex-start" *ngFor="let filas of sala">
         <ion-col *ngFor="let thing of filas">
           <ion-checkbox [(ngModel)] = "thing.isObstaculo">
-            {{thing}}
           </ion-checkbox>
         </ion-col>
       </ion-row>
+      <ion-row>
+        <button ion-button (click)="crear()" class="center">Crear</button>
+      </ion-row>
     </ion-grid>
-    <button ion-button (click)="crear()" class="center">Crear</button>
-  
+  </ion-scroll>
+ <!--    <ion-scroll scrollXY="true" style = "white-space:nowrap; height:2000px">
+      <ion-list>
+       <ion-item *ngFor="let filas of sala">
+        <ion-checkbox *ngFor="let thing of filas" [(ngModel)]="thing.isObstaculo" >
+        </ion-checkbox>
+      </ion-item> 
+      <button ion-button (click)="crear()" class="center">Crear</button>
+     </ion-list>
+    </ion-scroll>-->
 </ion-content>

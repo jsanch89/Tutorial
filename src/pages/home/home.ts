@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { MapaPage } from '../mapa/mapa';
 import { ViajePage } from '../viaje/viaje'
+import { AgregarLugarPage } from '../agregar-lugar/agregar-lugar';
 import { SingletonService } from '../../services/singleton/singleton';
 
 @Component({
@@ -21,6 +22,10 @@ export class HomePage {
   goToViaje(){
     this.navCtrl.push(ViajePage);
     console.log("Cambio de pestaña");
+  }
+
+  goToAgregar(){
+    this.navCtrl.push( AgregarLugarPage );
   }
 
 }

@@ -10,6 +10,8 @@ import { HomePage } from '../pages/home/home';
 import { MapaPage } from '../pages/mapa/mapa';
 import { ViajePage } from '../pages/viaje/viaje';
 import { CrearObstaculoPage } from '../pages/crear-obstaculo/crear-obstaculo';
+import { AgregarLugarPage } from '../pages/agregar-lugar/agregar-lugar';
+import { AggUbicacionPage } from '../pages/agg-ubicacion/agg-ubicacion';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { CrearObstaculoPage } from '../pages/crear-obstaculo/crear-obstaculo';
     HomePage,
     MapaPage,
     ViajePage,
-    CrearObstaculoPage
+    CrearObstaculoPage,
+    AgregarLugarPage,
+    AggUbicacionPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,9 @@ import { CrearObstaculoPage } from '../pages/crear-obstaculo/crear-obstaculo';
     HomePage,
     MapaPage,
     ViajePage,
-    CrearObstaculoPage
+    CrearObstaculoPage,
+    AgregarLugarPage,
+    AggUbicacionPage
   ],
   providers: [
     StatusBar,

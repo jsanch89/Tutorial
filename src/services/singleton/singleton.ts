@@ -5,6 +5,10 @@ export class SingletonService{
   private largo:number;
   private ancho:number;
   private sala:any[][];
+  private list = [];
+  private cont = 0;
+  private inicio:any;
+  private fin:any;
 
   constructor() {
   }
@@ -42,6 +46,24 @@ export class SingletonService{
 
   setSala( thing ){
     this.sala = thing;
+  }
+
+  agregarLugar( lugar ){
+    this.list[this.cont] = lugar;
+    console.log( this.list );
+    this.cont+=1; 
+  }
+
+  getLugares(){
+    return this.list;
+  }
+
+  setInicio( inicio ){
+    this.inicio = inicio;
+  }
+
+  setFinal( fin ){
+    this.fin = fin;
   }
 
  }

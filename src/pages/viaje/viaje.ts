@@ -15,8 +15,20 @@ import { SingletonService } from '../../services/singleton/singleton';
   templateUrl: 'viaje.html',
 })
 export class ViajePage {
-
+  private inicioPosicion;
+  private finalPosicion;
+  private lugares;
+   
   constructor(public navCtrl: NavController, public navParams: NavParams, public singleto:SingletonService) {
+    this.lugares = this.singleto.getLugares();
+  }
+
+  crearPuntos(){
+    this.singleto.setInicio( this.inicioPosicion );
+    this.singleto.setFinal( this.finalPosicion );
+    console.log( this.inicioPosicion );
+    console.log( this.finalPosicion );
+    this.navCtrl.pop();
   }
 
   ionViewDidLoad() {

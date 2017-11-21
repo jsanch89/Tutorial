@@ -14,5 +14,22 @@
 
 
 <ion-content padding>
-<p>hola mundo 2 jaja</p>
+    <ion-item>
+        <ion-label>Inicio: </ion-label>
+        <ion-select [(ngModel)]="inicioPosicion">
+          <ion-option *ngFor = "let lugar of lugares" [value] = "lugar">{{ lugar.nombre }}</ion-option>
+        </ion-select>
+      </ion-item>
+      
+      <ion-item>
+          <ion-label>Fin: </ion-label>
+          <ion-select [(ngModel)]="finalPosicion">
+            <ion-option *ngFor = "let lugar of lugares" [value] = "lugar" >{{ lugar.nombre }}</ion-option>
+          </ion-select>
+      </ion-item>
+
+      <div id="centrado">
+        <button ion-button (click) = "crearPuntos()">Calcular Ruta</button>
+      </div>
+      
 </ion-content>

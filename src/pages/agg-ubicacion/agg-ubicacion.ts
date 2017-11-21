@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
   templateUrl: 'agg-ubicacion.html',
 })
 export class AggUbicacionPage {
-  posicion:any;
+  posicion = {};
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl:ViewController ) {
   }
 

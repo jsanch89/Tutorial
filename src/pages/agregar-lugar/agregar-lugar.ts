@@ -28,7 +28,16 @@ export class AgregarLugarPage {
   aggUbicacion(){
      const myModal = this.modal.create( AggUbicacionPage, {} );
      myModal.present();
-     myModal.onDidDismiss(data => this.posicion = data );
+     myModal.onDidDismiss(data => this.agregarUbicacion(data) );
+     console.log(this.posicion);
   }
+  
+  agregarUbicacion( data ){
+    this.posicion = data;
+    console.log( data );
+    this.singleton.agregarLugar( {nombre: this.nombre, posX: this.posicion.x, posY: this.posicion.y} );
+    this.navCtrl.pop();
+  }
+
 
 }

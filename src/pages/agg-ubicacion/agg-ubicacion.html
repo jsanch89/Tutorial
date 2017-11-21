@@ -19,5 +19,16 @@
 
 
 <ion-content padding>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nobis labore harum debitis placeat aspernatur velit, quam dicta optio, non animi. Deleniti praesentium, illum minus sint dolorem sequi molestias fugit?</p>
+  <ion-item>
+    <ion-label color="primary">poscion x:</ion-label>
+    <ion-input type="number" [(ngModel)] = "posicion.x" name = "x" min = "0"  ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">poscion y:</ion-label>
+    <ion-input type="number" [(ngModel)] = "posicion.y" name = "y" min="0"></ion-input>
+  </ion-item>
+
+  <div class="centrado">
+    <button ion-button type="submit" (click)="close()">Agregar Punto</button>
+  </div>
 </ion-content>

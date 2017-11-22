@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SingletonService } from '../services/singleton/singleton';
+import { AEstrellaService } from '../services/aestrella/aestrella';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -41,6 +42,7 @@ import { AggUbicacionPage } from '../pages/agg-ubicacion/agg-ubicacion';
     StatusBar,
     SplashScreen,
     SingletonService,
+    AEstrellaService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

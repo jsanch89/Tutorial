@@ -7,9 +7,9 @@ export class SingletonService{
   private sala:any[][];
   private list = [];
   private cont = 0;
-  private inicio:any;
-  private fin:any;
-
+  private inicio;
+  private fin;
+  
   constructor() {
   }
 
@@ -31,11 +31,7 @@ export class SingletonService{
     for(var i= 0; i< this.largo; ++i){
       this.sala[i] = [];
       for( var j = 0; j < this.ancho; ++j){
-        this.sala[i][j]  = {
-          id:[i,j], 
-          numer: 0 ,
-          isObstaculo: false 
-        };
+        this.sala[i][j]  = {posicion: [i, j],obstaculo:0};
       }
     }
   }
@@ -49,9 +45,10 @@ export class SingletonService{
   }
 
   agregarLugar( lugar ){
-    this.list[this.cont] = lugar;
+    this.list[this.cont] = {nombre: lugar.nombre, posicion: [lugar.x, lugar.y]};
     console.log( this.list );
-    this.cont+=1; 
+    this.cont+=1;
+    
   }
 
   getLugares(){
@@ -66,4 +63,4 @@ export class SingletonService{
     this.fin = fin;
   }
 
- }
+}

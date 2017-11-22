@@ -20,9 +20,11 @@ calcularRuta(mapa,inicio,meta){
     this.mapa = this.convertirMapa(mapa);
     this.inicio = this.convertirNodo(inicio);
     this.meta = this.convertirNodo(meta);
-    //this.recorrido();
-    //this.retornarRuta();
+    this.recorrido();
+    this.retornarRuta();
     console.log(this.mapa);
+    console.log(this.inicio);
+    console.log(this.meta);
 }
 
 convertirNodo( obj ){

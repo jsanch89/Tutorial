@@ -45,7 +45,7 @@ export class SingletonService{
   }
 
   agregarLugar( lugar ){
-    this.list[this.cont] = {nombre: lugar.nombre, posicion: [lugar.x, lugar.y]};
+    this.list[this.cont] = {nombre: lugar.nombre, x: lugar.posX, y: lugar.posY};
     console.log( this.list );
     this.cont+=1;
     
